@@ -1,5 +1,5 @@
 pub mod produit;
-use crate::produit::CartItem;
+use crate::produit::{CartItem,Order};
 
 fn main() {
     let items: Vec<CartItem> = vec![
@@ -10,4 +10,8 @@ fn main() {
     ];
     let isma = 130.0+1300.0+530.0+30.0;
     assert_eq!(CartItem::total_panier(&items),isma);
+    let boula = CartItem::total_panier(&items);
+    println!("{}",CartItem::appliquer_reduction(boula));
+    let commande: Order = Order::new(items);
+    assert_eq!(Order::valider_commande(&commande),false);
 }

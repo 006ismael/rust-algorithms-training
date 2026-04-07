@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "target/thumbv7m-none-eabi/debug/nostd"
+elf = "target/thumbv7m-none-eabi/debug/nostd"
